@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Piedra Papel o Tijera</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Piedra Papel Tijera</h1>
+      <!-- Tablero de puntuación -->
+    </header>
+    <div class="score-board">
+      <div id="user-label" class="badge">Vos</div>
+      <div id="computer-label" class="badge">Yo</div>
+      <span class="user-score">0</span>:<span class="computer-score">0</span>
+    </div>
+    <!-- Resultado -->
+    <div class="result">
+      <p>Papel sobre piedra. Vos ganás</p>
+    </div>
+    <!-- Selección -->
+    <div class="choices">
+      <div class="choice">
+        <img src="img/piedra.png" id="rock" alt="Selección Piedra" />
+      </div>
+      <div class="choice">
+        <img src="img/papel.png" id="paper" alt="Selección Papel" />
+      </div>
+      <div class="choice">
+        <img src="img/tijera.png" id="scissor" alt="Selección Tijera" />
+      </div>
+    </div>
+    <!-- Mensaje -->
+    <p class="action-message">Esperando tu selección</p>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
