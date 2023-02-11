@@ -24,31 +24,48 @@ function win(user, computer) {
   let message = "";
   let smallUser = "vos".fontsize(3).sub();
   let smallComputer = "yo".fontsize(3).sub();
+  let userChoiceDiv = document.getElementById(user);
   userScore++;
   userScore_span.innerHTML = userScore;
   result_p.innerHTML = `${translate(user)}${smallUser} gana a ${translate(
     computer
   )}${smallComputer}. Ganaste 🔥`;
+  userChoiceDiv.classList.add("green-glow");
+  setTimeout(() => {
+    userChoiceDiv.classList.remove("green-glow");
+  }, 300);
 }
 
 function lose(user, computer) {
   let message = "";
   let smallUser = "vos".fontsize(3).sub();
   let smallComputer = "yo".fontsize(3).sub();
+  let userChoiceDiv = document.getElementById(user);
+
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${translate(user)}${smallUser} pierde con ${translate(
     computer
   )}${smallComputer}. Perdiste ☠`;
+  userChoiceDiv.classList.add("red-glow");
+  setTimeout(() => {
+    userChoiceDiv.classList.remove("red-glow");
+  }, 300);
 }
 
 function draw(user, computer) {
   let message = "";
   let smallUser = "vos".fontsize(3).sub();
   let smallComputer = "yo".fontsize(3).sub();
+  let userChoiceDiv = document.getElementById(user);
+
   result_p.innerHTML = `${translate(user)}${smallUser} igual que ${translate(
     computer
   )}${smallComputer}. Empate!!`;
+  userChoiceDiv.classList.add("gray-glow");
+  setTimeout(() => {
+    userChoiceDiv.classList.remove("gray-glow");
+  }, 300);
 }
 
 function game(userChoice) {
@@ -73,13 +90,13 @@ function game(userChoice) {
 }
 
 function main() {
-  stone_div.addEventListener("click", function () {
+  stone_div.addEventListener("click", () => {
     game("stone");
   });
-  paper_div.addEventListener("click", function () {
+  paper_div.addEventListener("click", () => {
     game("paper");
   });
-  scissor_div.addEventListener("click", function () {
+  scissor_div.addEventListener("click", () => {
     game("scissor");
   });
 }
