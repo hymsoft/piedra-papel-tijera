@@ -111,6 +111,29 @@ header h1 {
   font-size: 20px;
   margin-top: 20px;
 }
+.reset-container {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.reset-btn {
+  width: 100px;
+  height: 40px;
+  background: #eaf6ff;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  transition: all 0.3s linear;
+  border-color: #49a6e8;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.reset-btn:hover {
+  background: #49a6e8;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {

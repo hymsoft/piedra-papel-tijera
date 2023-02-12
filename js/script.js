@@ -7,6 +7,7 @@ const result_p = document.querySelector(".result > p");
 const stone_div = document.getElementById("stone");
 const paper_div = document.getElementById("paper");
 const scissor_div = document.getElementById("scissor");
+const reset_btn = document.getElementById("reset-btn");
 
 function getComputerChoice() {
   const choice = ["stone", "paper", "scissor"];
@@ -89,6 +90,14 @@ function game(userChoice) {
   }
 }
 
+function reset() {
+  userScore = 0;
+  computerScore = 0;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+  result_p.textContent = "Comenzar el juego";
+}
+
 function main() {
   stone_div.addEventListener("click", () => {
     game("stone");
@@ -98,6 +107,9 @@ function main() {
   });
   scissor_div.addEventListener("click", () => {
     game("scissor");
+  });
+  reset_btn.addEventListener("click", () => {
+    reset();
   });
 }
 
