@@ -6,38 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juego de Piedra Papel o Tijera</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <!-- header -->
     <header>
       <h1>Piedra Papel Tijera</h1>
       <!-- Tablero de puntuación -->
     </header>
-    <div class="score-board">
-      <div id="user-label" class="badge">Vos</div>
-      <div id="computer-label" class="badge">Yo</div>
-      <span id="user-score">0</span>:<span id="computer-score">0</span>
-    </div>
-    <!-- Resultado -->
-    <div class="result">
-      <p>Comenzar el juego</p>
-    </div>
-    <!-- Selección -->
-    <div class="choices">
-      <div class="choice" id="stone">
-        <img src="img/piedra.png" alt="Selección Piedra" />
+    <!-- Main -->
+    <main>
+      <div class="score-board">
+        <div id="user-label" class="badge">Vos</div>
+        <div id="computer-label" class="badge">Yo</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
       </div>
-      <div class="choice" id="paper">
-        <img src="img/papel.png" alt="Selección Papel" />
+      <!-- Resultado -->
+      <div class="result">
+        <p>Comenzar el juego</p>
       </div>
-      <div class="choice" id="scissor">
-        <img src="img/tijera.png" alt="Selección Tijera" />
+      <!-- Selección -->
+      <div class="choices">
+        <div class="choice" id="stone">
+          <img src="img/piedra.png" alt="Selección Piedra" />
+        </div>
+        <div class="choice" id="paper">
+          <img src="img/papel.png" alt="Selección Papel" />
+        </div>
+        <div class="choice" id="scissor">
+          <img src="img/tijera.png" alt="Selección Tijera" />
+        </div>
       </div>
-    </div>
-    <!-- Mensaje -->
-    <p class="action-message">Esperando tu selección</p>
-    <!-- Reset -->
-    <div class="reset-container">
-      <button id="reset-btn" class="reset-btn">reset</button>
+      <!-- Mensaje -->
+      <p class="action-message">Esperando tu selección</p>
+      <!-- Reset -->
+      <div class="reset-container">
+        <button id="reset-btn" class="reset-btn">reset</button>
+      </div>
+    </main>
+    <!-- Config -->
+    <button class="sidebar-toggle">
+      <!-- <i class="fas fa-bars"></i> -->
+      <i class="fa-solid fa-gear"></i>
+    </button>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img
+          src="https://i.postimg.cc/yxRXwZRH/funny-frenzy-logo-sin-slogan-negro.png"
+          alt="logo"
+          class="logo"
+        />
+        <button class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <!-- links -->
+      <div class="config"></div>
+      <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com/hymsoft/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Hymsoft" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-behance"></i>
+          </a>
+        </li> -->
+        <li>
+          <a
+            href="https://www.linkedin.com/in/hugo-antonio-segura-22099696"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/hymsoft" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- Loader -->
+    <div class="loader-container">
+      <span class="loader"></span>
     </div>
     <script src="/js/script.js"></script>
   </body>

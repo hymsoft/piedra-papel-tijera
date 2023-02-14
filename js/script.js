@@ -1,13 +1,20 @@
 let userScore = 0;
 let computerScore = 0;
+const scoreBoard_div = document.querySelector(".score-board");
+const choices_div = document.querySelector(".choices");
+const actionMessage_p = document.querySelector(".action-message");
+const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".score-board");
-const result_p = document.querySelector(".result > p");
 const stone_div = document.getElementById("stone");
 const paper_div = document.getElementById("paper");
 const scissor_div = document.getElementById("scissor");
+const resetContainer_div = document.querySelector(".reset-container");
 const reset_btn = document.getElementById("reset-btn");
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector(".close-btn");
 
 function getComputerChoice() {
   const choice = ["stone", "paper", "scissor"];
@@ -111,6 +118,41 @@ function main() {
   reset_btn.addEventListener("click", () => {
     reset();
   });
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show-sidebar");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("show-sidebar");
+  });
 }
 
-main();
+window.onload = function () {
+  setTimeout(() => {
+    // Obtener los elementos de la página
+
+    let loader = document.querySelector(".loader");
+
+    // Ocultar el loader
+    loader.style.display = "none";
+
+    // Mostrar los elementos
+    scoreBoard_div.style.opacity = 1;
+    result_div.style.opacity = 1;
+    choices_div.style.opacity = 1;
+    actionMessage_p.style.opacity = 1;
+    resetContainer_div.style.opacity = 1;
+    toggleBtn.style.opacity = 1;
+    // infoGame2[0].style.opacity = 1;
+    // infoGame2[1].style.opacity = 1;
+
+    //     .score-board,
+    // .result,
+    // .choices,
+    // .action-message,
+    // .reset-container,
+    // .sidebar-toggle
+
+    main();
+  }, 2000);
+};
